@@ -342,7 +342,7 @@ function BoardCardForm() {
 
 							<div className="grid grid-cols-1 gap-4 mt-6 sm:grid-cols-2">
 								<Controller
-									name="frequencyRating"
+									name={"frequencyRating" as any}
 									control={control}
 									render={({ field }) => (
 										<TextField
