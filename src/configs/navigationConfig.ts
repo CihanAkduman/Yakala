@@ -30,7 +30,7 @@ const navigationConfig: FuseNavItemType[] = [
 			},
 			{
 				id: 'dashboards.analytics',
-				title: 'Analytics',
+				title: 'Analizler',
 				type: 'item',
 				icon: 'lucide:chart-pie',
 				url: '/dashboards/analytics'
@@ -59,14 +59,6 @@ const navigationConfig: FuseNavItemType[] = [
 				url: '/apps/globi',
 			},
 			{
-				id: 'apps.academy',
-				title: 'Academy',
-				type: 'item',
-				icon: 'lucide:graduation-cap',
-				url: '/apps/academy',
-				translate: 'ACADEMY'
-			},
-			{
 				id: 'apps.calendar',
 				title: 'Calendar',
 				type: 'item',
@@ -81,14 +73,6 @@ const navigationConfig: FuseNavItemType[] = [
 				icon: 'lucide:message-square',
 				url: '/apps/messenger',
 				translate: 'MESSENGER'
-			},
-			{
-				id: 'apps.contacts',
-				title: 'Contacts',
-				type: 'item',
-				icon: 'lucide:users',
-				url: '/apps/contacts',
-				translate: 'CONTACTS'
 			},
 			{
 				id: 'apps.mailbox',
@@ -114,13 +98,6 @@ const navigationConfig: FuseNavItemType[] = [
 				url: '/apps/loop',
 				translate: 'SCRUMBOARD'
 			},
-			{
-				id: 'apps.profile',
-				title: 'Profile',
-				type: 'item',
-				icon: 'lucide:circle-user',
-				url: '/apps/profile'
-			}
 			]
 			},
 			{
@@ -130,13 +107,6 @@ const navigationConfig: FuseNavItemType[] = [
 		type: 'group',
 		icon: 'lucide:file-text',
 		children: [
-			{
-				id: 'pages.activities',
-				title: 'Activities',
-				type: 'item',
-				icon: 'lucide:align-left',
-				url: '/pages/activities'
-			},
 			{
 				id: 'Yakala',
 				title: 'globalbilgi.com.tr',
