@@ -1,4 +1,4 @@
-import { ChatConversation } from '../types/globi-types';
+import { ChatConversation } from '../../types/globi-types';
 
 export const mockConversations: ChatConversation[] = [
 	{
