@@ -71,10 +71,10 @@ export type ScrumboardCard = {
 	rootCauseAnalysis?: string; // Kök neden analizi detayı
 	corpixTrainingLink?: string; // Corpix eğitim linki
 // QM Özel Alanları
-affectedCustomerSegments?: string[]; // string[] olarak değiştirin
-frequencyRating?: 'rare' | 'occasional' | 'frequent' | 'systematic'; // EKLEYIN
-customerImpactLevel?: 'low' | 'medium' | 'high' | 'critical'; // EKLEYIN  
-rootCauseAnalysisQM?: string; // EKLEYIN
+affectedCustomerSegments?: string[];
+frequencyRating?: 'rare' | 'occasional' | 'frequent' | 'systematic';
+customerImpactLevel?: 'low' | 'medium' | 'high' | 'critical';  
+rootCauseAnalysisQM?: string;
 occurrenceFrequency?: 'daily' | 'weekly' | 'monthly' | 'rarely';
 impactLevel?: 1 | 2 | 3 | 4 | 5;
 	// Ortak Alanlar
