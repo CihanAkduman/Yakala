@@ -78,9 +78,7 @@ function DilEkibiKpiWidget() {
 			fontSize: '13px',
 			fontWeight: 500,
 			markers: {
-				width: 12,
-				height: 12,
-				radius: 6
+				size: 12
 			}
 		},
 		markers: {
@@ -101,8 +99,18 @@ function DilEkibiKpiWidget() {
 		tooltip: {
 			theme: 'dark',
 			y: {
-				formatter: (val) => `${val}%`
-			}
+formatter: (val) => {
+    const numVal = Array.isArray(val) ? val[0] : Number(val); // string veya array'i number'a çevir
+
+    if (currentRange === 'satis-performans' && numVal > 100) {
+        return `€${numVal.toFixed(0)}`;
+    } else if (currentRange === 'genel-metrikler' && numVal > 10) {
+        return `${numVal.toFixed(1)}k`;
+    }
+
+    return `${numVal}`;
+}
+}
 		},
 		xaxis: {
 			labels: {
@@ -114,15 +122,15 @@ function DilEkibiKpiWidget() {
 			},
 			categories
 		},
-yaxis: {
-	show: false, // Bu satırı ekle - yüzde değerlerini gizler
-	max: 100,
-	min: 0,
-	tickAmount: 5,
-	labels: {
-		formatter: (val) => `${val}%`
-	}
-}
+		yaxis: {
+			show: false, // Bu satırı ekle - yüzde değerlerini gizler
+			max: 100,
+			min: 0,
+			tickAmount: 5,
+			labels: {
+				formatter: (val) => `${val}%`
+			}
+		}
 	};
 
 	return (
