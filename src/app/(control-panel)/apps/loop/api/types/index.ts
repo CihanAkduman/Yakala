@@ -70,10 +70,13 @@ export type ScrumboardCard = {
 	affectedRepresentatives?: number; // Etkilenen temsilci sayısı
 	rootCauseAnalysis?: string; // Kök neden analizi detayı
 	corpixTrainingLink?: string; // Corpix eğitim linki
-	// QM Özel Alanları
-	affectedCustomerSegments?: ('individual' | 'corporate' | 'premium')[]; // Etkilenen müşteri segmentleri
-	occurrenceFrequency?: 'daily' | 'weekly' | 'monthly' | 'rarely'; // Yaşanma sıklığı
-	impactLevel?: 1 | 2 | 3 | 4 | 5; // Etki seviyesi (1-5)
+// QM Özel Alanları
+affectedCustomerSegments?: string[]; // string[] olarak değiştirin
+frequencyRating?: 'rare' | 'occasional' | 'frequent' | 'systematic'; // EKLEYIN
+customerImpactLevel?: 'low' | 'medium' | 'high' | 'critical'; // EKLEYIN  
+rootCauseAnalysisQM?: string; // EKLEYIN
+occurrenceFrequency?: 'daily' | 'weekly' | 'monthly' | 'rarely';
+impactLevel?: 1 | 2 | 3 | 4 | 5;
 	// Ortak Alanlar
 	solutionNotes?: string; // Çözüm notları
 };
